@@ -1,0 +1,960 @@
+:root{
+    --primary-color: black;
+    --secondary-color: white; 
+    --tertiary-color: gold;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter';
+    color: #ffffff;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+}
+
+/* asset section start */
+
+h1{
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 88px;
+    color: var(--secondary-color);
+}
+
+h2{
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+h3{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--secondary-color);
+}
+
+h4{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--secondary-color);
+}
+
+p{
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 32px;
+    color: var(--secondary-color);
+}
+
+span{
+    color: var(--tertiary-color);
+
+}
+
+.btn{
+    padding: 12px 24px;
+    margin: 4px 0px;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 10px;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    font-size: 21px;
+    cursor:pointer;
+    max-width: max-content;
+}
+
+.btn-2{
+    padding: 8px 16px;
+    margin: 4px 0px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: 21px;
+    cursor:pointer;
+    max-width: max-content;
+}
+
+
+/* asset section ends */
+
+
+/* nav section start */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 64px;
+    border-bottom: 1px solid var(--secondary-color);
+    position:sticky;
+    top:0;
+    z-index: 1;
+    background-color: var(--primary-color);
+}
+
+header > a, header nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+header nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 16px;
+    position: relative;
+}
+
+header nav ul li ul{
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    padding: 16px 16px;
+    border: 1px solid var(--secondary-color);
+    margin-left:-32px;
+}
+
+header nav ul li:hover ul{
+    display: block;
+}
+
+header nav ul li ul li{
+    display: block;
+    margin: 8px 0px;
+    border-bottom: 1px solid var(--secondary-color);
+    text-align: center;
+}
+
+header nav ul li a:hover{
+    color: var(--tertiary-color);
+}
+
+/* nav section ends */
+
+/* hero section start */
+
+#hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 156px;
+}
+
+
+#hero-section > img{
+    aspect-ratio: 0.19/1;
+}
+
+#hero-section > div{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+#hero-section > div > h1{
+
+    text-align: center;
+}
+
+
+#hero-section > div > h3{
+    text-align: center;
+}
+
+
+/* about section start */
+
+
+#about-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 0px 64px;
+    margin:256px 0px;
+}
+
+
+#about-section > img{
+    aspect-ratio: 0.98/1;
+}
+
+#about-section > div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+}
+
+
+/* what do i do card section start */
+
+#what-i-do-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 0px 64px;
+    margin: 256px 0px;
+}
+
+
+
+.skill-card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+    justify-content: center;
+}
+
+.skill-card-container > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--tertiary-color);
+    padding: 32px 16px;
+    border-radius: 16px;
+
+}
+
+.skill-card-container > div > h3,
+.skill-card-container > div > p{
+    color: var(--primary-color);
+    text-align: center;
+}
+
+
+
+/* 
+work experience section start */
+
+
+#work-experience-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 32px;
+    padding: 0px 64px;
+    margin-top: 32px;
+    margin-bottom:256px;
+    grid-template-areas:
+    "one one"
+    "two three"
+    "four five";
+}
+
+#work-experience-section > div:nth-child(1){
+    grid-area: one;
+}
+#work-experience-section > div:nth-child(2){
+    grid-area: two;
+}
+#work-experience-section > div:nth-child(3){
+    grid-area: three;
+}
+#work-experience-section > div:nth-child(4){
+    grid-area: four;
+}
+#work-experience-section > div:nth-child(5){
+    grid-area: five;
+}
+
+
+#work-experience-section > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    background-color: var(--tertiary-color);
+    border-radius: 24px;
+    padding: 32px 64px;
+}
+
+#work-experience-section > div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+
+#work-experience-section > div > div > h3{
+    color: var(--primary-color);
+}
+
+#work-experience-section > div > div > h4{
+    color: var(--primary-color);
+}
+
+#work-experience-section > div > div > p{
+    color: var(--primary-color);
+}
+
+#work-experience-section > div > img{
+    margin-top: -64px;
+    margin-bottom: -80px;
+}
+
+
+
+/* education section start  */
+
+#education-section h3{
+    color: var(--primary-color);
+}
+
+
+#education-section h4{
+    color: var(--primary-color);
+}
+
+#education-section p{
+    color: var(--primary-color);
+}
+
+#education-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 0px 64px;
+    margin: 256px 0px;
+}
+
+#education-section > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    border-radius: 24px;
+    align-items: start;
+    justify-content: center;
+    grid-template-areas: "one one"
+    "two three";
+}
+
+#education-section > div > div{
+    background-color: var(--tertiary-color);
+    border-radius: 16px;
+    padding: 32px 16px;
+}
+
+#education-section > div > div:nth-child(1){
+    grid-area: one;
+    display: flex;
+    gap: 64px;
+    padding: 32px 64px;
+    align-items: center;
+}
+
+#education-section > div > div:nth-child(1) > div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#education-section > div > div:nth-child(1) > img{
+    width: 80%;
+    height: 100%;
+    margin-top: -44px;
+    margin-bottom: -64px;
+}
+
+#education-section > div > div:nth-child(2){
+    grid-area: two;
+}
+
+#education-section > div > div:nth-child(3){
+    grid-area: three;
+}
+
+
+#education-section > div > div:nth-child(2),
+#education-section > div > div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px 64px;
+}
+
+
+
+
+/*     
+honors and awards sections start */
+
+#honors-and-awards-section h3{
+    color: var(--primary-color);
+}
+
+
+#honors-and-awards-section p{
+    color: var(--primary-color);
+}
+
+#honors-and-awards-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 0px 64px;
+    margin: 256px 0px;
+}
+
+
+#honors-and-awards-section > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+#honors-and-awards-section > div> div{  
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--tertiary-color);
+    border-radius: 16px;
+    padding: 16px 16px;
+}
+
+
+#honors-and-awards-section > div> div > img{
+   width: 100%;
+   aspect-ratio: 1/1;
+}
+
+
+
+#honors-and-awards-section > div> div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+}
+
+#honors-and-awards-section .btn-2{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+/* 
+contact section start */
+
+
+
+#contact-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin: 156px 0px;
+}
+
+#contact-section h2{
+    color: var(--secondary-color);
+}
+
+#contact-section > form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#contact-section > form input,
+#contact-section > form textarea{
+    background-color: transparent;
+    border: 3px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 8px;
+    color: var(--secondary-color);
+    min-width: 800px;
+    min-height: 48px;
+    font-size: 21px;
+}
+
+
+#contact-section button{
+    background-color: transparent;
+    border: 3px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--primary-color);
+    min-width: 800px;
+    background-color: var(--tertiary-color);
+}
+
+
+
+/* footer section start */
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    margin: auto 0px;
+    border-top: 1px solid var(--secondary-color);
+    
+}
+
+footer > div{
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 64px;
+}
+
+footer > div > div{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    gap: 16px;
+}
+
+footer > div > div > h2{
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 88px;
+    color:var(--tertiary-color);
+    text-align: left;
+} 
+
+footer > div > div > h3{
+    font-size: 32px;
+    font-weight: 700;
+    width: 500px;
+} 
+
+
+footer > div > div> div{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 24px;
+}
+
+
+hr{
+    margin:0px 156px
+}
+
+#copyright{
+    margin: auto;
+    margin-bottom:32px;
+}
+
+
+
+
+
+
+/* media query start
+media query start
+media query start
+media query start */
+
+
+
+/* Styles for larger laptops */
+
+
+@media (max-width: 1280px) {
+
+    h1 {
+        font-size: 48px; /* Reduced font size */
+        line-height: 64px; /* Adjusted line height */
+    }
+
+    h2 {
+        font-size: 48px; /* Reduced font size */
+    }
+
+    h3 {
+        font-size: 28px; /* Reduced font size */
+        line-height: 36px; /* Adjusted line height */
+    }
+
+    h4 {
+        font-size: 20px; /* Reduced font size */
+        line-height: 28px; /* Adjusted line height */
+    }
+
+    p {
+        font-size: 18px; /* Reduced font size */
+        line-height: 26px; /* Adjusted line height */
+    }
+
+    
+
+    .btn {
+        padding: 10px 20px; /* Adjusted padding */
+        font-size: 18px; /* Reduced font size */
+    }
+
+    .btn-2 {
+        padding: 6px 12px; /* Adjusted padding */
+        font-size: 18px; /* Reduced font size */
+    }
+
+    header {
+        padding: 16px 32px; /* Reduce padding for smaller screens */
+    }
+
+    header > a, header nav a {
+        font-size: 18px; /* Slightly reduce font size */
+    }
+
+    header nav ul li {
+        margin-left: 8px; /* Reduce left margin */
+    }
+
+    header nav ul li ul {
+        padding: 12px; /* Adjust padding for dropdowns */
+    }
+
+    header nav ul li ul li {
+        margin: 4px 0; /* Adjust margin for dropdown items */
+    }
+
+    #hero-section {
+
+        margin-top: 100px; /* Reduced margin for better spacing */
+        align-items: center; /* Center align items */
+    }
+
+    #hero-section > img {
+        width: 100%; /* Make image responsive */
+        max-width: 100px; /* Optional: limit max width for larger screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #hero-section > div {
+        align-items: center; /* Center align text */
+        gap: 16px; /* Reduced gap between elements */
+    }
+
+    #hero-section > div > h1 {
+        font-size: 36px; /* Adjust font size for smaller screens */
+    }
+
+    #hero-section > div > h3 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+
+
+    #about-section {
+        flex-direction: column; /* Stack items vertically */
+        padding: 0px 32px; /* Reduced padding for smaller screens */
+        margin: 128px 0; /* Reduced margin for better spacing */
+        gap: 16px; /* Adjusted gap between items */
+    }
+
+    #about-section > img {
+        width: 100%; /* Make image responsive */
+        max-width: 400px; /* Optional: limit max width for larger screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #about-section > div {
+        align-items: center; /* Center align text */
+        gap: 12px; /* Adjusted gap between elements */
+        text-align: center;
+    }
+
+
+    #what-i-do-section {
+        padding: 0px 32px; /* Reduced padding for smaller screens */
+        margin: 128px 0; /* Reduced margin for better spacing */
+        gap: 16px; /* Adjusted gap between items */
+    }
+
+    .skill-card-container {
+        grid-template-columns: 1fr 1fr; /* Change to two columns */
+        gap: 16px; /* Reduced gap between cards */
+    }
+
+    .skill-card-container > div {
+        padding: 24px 12px; /* Adjusted padding for skill cards */
+    }
+
+    .skill-card-container > div > h3,
+    .skill-card-container > div > p {
+        font-size: 18px; /* Optional: Adjust font size for better readability */
+    }
+
+    #honors-and-awards-section {
+        padding: 0px 32px; /* Reduced padding for smaller screens */
+        margin: 128px 0; /* Reduced margin for better spacing */
+        gap: 16px; /* Adjusted gap between items */
+    }
+
+    #honors-and-awards-section > div {
+        grid-template-columns: 1fr; /* Change to a single column layout */
+        gap: 16px; /* Maintain gap between items */
+    }
+
+    #honors-and-awards-section > div > div {
+        padding: 16px; /* Maintain padding for award cards */
+    }
+
+    #honors-and-awards-section > div > div > img {
+        width: 100%; /* Ensure images are responsive */
+        aspect-ratio: 1/1; /* Maintain aspect ratio */
+    }
+
+    #honors-and-awards-section > div > div > div {
+        align-items: center; /* Center align text within award cards */
+        gap: 12px; /* Adjusted gap between elements */
+    }
+
+    #honors-and-awards-section h3,
+    #honors-and-awards-section p {
+        font-size: 18px; /* Optional: Adjust font size for better readability */
+        text-align: center; /* Center align text for better appearance */
+    }
+
+    #honors-and-awards-section .btn-2 {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+        font-size: 16px; /* Optional: Adjust button font size */
+    }
+
+
+    footer {
+        padding: 16px; /* Add padding for better spacing */
+        gap: 16px; /* Reduced gap between footer items */
+    }
+
+    footer > div {
+         /* Stack items vertically */
+        margin: 16px; /* Reduced margin for better spacing */
+    }
+
+    footer > div > div {
+        align-items: flex-start; /* Align items to the start */
+        gap: 12px; /* Adjusted gap between elements */
+    }
+
+    footer > div > div > h2 {
+        font-size: 36px; /* Reduced font size for smaller screens */
+        line-height: 48px; /* Adjusted line height */
+        text-align: center; /* Center align text for better appearance */
+    }
+
+    footer > div > div > h3 {
+        font-size: 24px; /* Reduced font size for smaller screens */
+        width: auto; /* Remove fixed width for responsive design */
+    }
+
+    footer > div > div > div {
+       /* Stack items vertically in this section */
+        align-items: center; /* Center align items */
+        gap: 16px; /* Adjusted gap between items */
+    }
+
+    hr {
+        margin: 0px 32px; /* Reduced margins for horizontal rule */
+    }
+
+    #copyright {
+        margin-bottom: 16px; /* Adjusted bottom margin */
+        text-align: center; /* Center align copyright text */
+    }
+
+
+}
+
+ /* Styles for large desktops */
+
+ 
+ @media (max-width: 1440px) {
+    h1 {
+        font-size: 48px; /* Adjusted font size */
+        line-height: 64px; /* Adjusted line height */
+    }
+
+    h2 {
+        font-size: 48px; /* Adjusted font size */
+    }
+
+    h3 {
+        font-size: 28px; /* Adjusted font size */
+        line-height: 36px; /* Adjusted line height */
+    }
+
+    h4 {
+        font-size: 20px; /* Adjusted font size */
+        line-height: 28px; /* Adjusted line height */
+    }
+
+    p {
+        font-size: 18px; /* Adjusted font size */
+        line-height: 26px; /* Adjusted line height */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Adjusted padding */
+        font-size: 18px; /* Adjusted font size */
+    }
+
+    .btn-2 {
+        padding: 6px 12px; /* Adjusted padding */
+        font-size: 18px; /* Adjusted font size */
+    }
+
+    header {
+        padding: 16px 32px; /* Reduced padding */
+    }
+
+    header > a, header nav a {
+        font-size: 18px; /* Slightly reduced font size */
+    }
+
+    #hero-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px; /* Reduced margin for better spacing */
+    }
+
+    #hero-section > img {
+        max-width: 156px; 
+    }
+
+    #about-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        padding: 0px 32px; /* Reduced padding for smaller screens */
+        margin: 128px 0; /* Reduced margin for better spacing */
+    }
+
+    #what-i-do-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        padding: 0px 32px; /* Reduced padding for smaller screens */
+        margin: 128px 0; /* Reduced margin for better spacing */
+    }
+
+    .skill-card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Change to two columns layout */
+        gap: 16px; /* Reduced gap between cards */
+    }
+
+    #work-experience-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        padding: 0px 32px;
+        margin-top: 32px;
+        margin-bottom: 128px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 16px; /* Reduced gap between footer items */
+    }
+
+    footer img{
+        width: 50px;
+        height: 50px;
+    }
+
+    footer > div {
+        margin:32px; 
+        display:flex;
+        justify-content:space-between;
+    } 
+
+    footer > div > div{
+        display: flex;
+        width: max-content;
+ 
+    }
+
+    footer > div > div > h2{
+        font-size :36px; 
+        line-height :48px; 
+
+    } 
+
+    footer > div > div > div{
+        gap: 16px;
+        justify-content: start;
+        width: max-content;
+    
+    }
+
+    footer > div > div > h3{
+        font-size :24px; 
+        width: max-content;
+    } 
+
+    hr{
+        margin:0px; 
+        margin-left:32px; 
+        margin-right:32px; 
+    } 
+
+    #copyright{
+        margin-bottom:16px; 
+        text-align:center; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
